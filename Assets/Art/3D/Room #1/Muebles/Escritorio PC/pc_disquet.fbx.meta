@@ -3,7 +3,12 @@ guid: 90b210b43c9f42a46b5679f3c54cd778
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pc_disquet
+    second: {fileID: 2100000, guid: 3cb166b3f937b4945b539964ca7263e1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: c3efc4f8606b38b40b3083582c8a2a50
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mesa + banquito
+    second: {fileID: 2100000, guid: 7d78e6a6d8bda224abaa90b03030f5c2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

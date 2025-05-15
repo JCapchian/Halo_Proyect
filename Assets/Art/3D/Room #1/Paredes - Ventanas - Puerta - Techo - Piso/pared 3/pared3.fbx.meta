@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: pared3
-    second: {fileID: 2100000, guid: d9badfc0a645ff24f88bf14f330ae8cd, type: 2}
+    second: {fileID: 2100000, guid: 3d1a9d8982875524a9b210721274b232, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

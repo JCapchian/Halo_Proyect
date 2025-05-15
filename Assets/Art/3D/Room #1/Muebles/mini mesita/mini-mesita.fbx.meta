@@ -3,7 +3,12 @@ guid: 2ff0eb846cdd3784b95186d43b3eecca
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mini-mesita
+    second: {fileID: 2100000, guid: 0bb7e98f2ee802d4da7a2753d99bc8df, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

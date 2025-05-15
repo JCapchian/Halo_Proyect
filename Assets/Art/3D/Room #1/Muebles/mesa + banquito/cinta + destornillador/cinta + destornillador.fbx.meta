@@ -3,7 +3,12 @@ guid: e4af742a92c9fd54d92953976c22b262
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cinta + destornillador
+    second: {fileID: 2100000, guid: efc5c0d99509ee442af162ed3b075ab3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 81dbfb5666a6bf84f8476b1b92fd947f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pc_silla
+    second: {fileID: 2100000, guid: 4d6b48664a797d9408767f83edc2fac9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 580f34e0dd0d29c4ab21e4585e8a6f07
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pc_escritorio
+    second: {fileID: 2100000, guid: bc04653adf55b0446ab7b60874533184, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

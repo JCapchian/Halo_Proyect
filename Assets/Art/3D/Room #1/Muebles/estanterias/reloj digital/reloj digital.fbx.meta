@@ -3,7 +3,12 @@ guid: c7fef361d299fb3428be8e21ec5b0f3c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reloj digital
+    second: {fileID: 2100000, guid: 489626ce8358f6342b2b25bb88045e25, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

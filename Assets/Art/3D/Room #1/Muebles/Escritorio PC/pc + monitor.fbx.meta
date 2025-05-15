@@ -3,7 +3,17 @@ guid: 5c2ca34be302f4d41a0e424d1b1135f5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cables
+    second: {fileID: 2100000, guid: de211d2795dd19d4c97649843f5a97c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pc + monitor
+    second: {fileID: 2100000, guid: 10694fcd20f540f4a9642fb1882d4bff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
