@@ -11,6 +11,16 @@ public class InputManager : MonoBehaviour
     public delegate void OnInteraction();
     OnInteraction onInteraction;
 
+    public void DisableControls()
+    {
+        playerControls.Disable();
+    }
+
+    public void EnableControls()
+    {
+        playerControls.Enable();
+    }
+
     private void OnEnable()
     {
         if (playerControls == null)
