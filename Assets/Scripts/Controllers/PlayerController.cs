@@ -22,7 +22,15 @@ public class PlayerController : MonoBehaviour
         movementHandler.Initialize(this);
         cameraHandler.Initialize(this);
         interactionHandler.Initialize(this);
+
     }
+
+    public void Start()
+    {
+
+        //inputManager.DisableControls();
+    }
+    #region Execution Functions
 
     private void Update()
     {
@@ -38,4 +46,5 @@ public class PlayerController : MonoBehaviour
     {
         cameraHandler.HandleRotation();
     }
+    #endregion
 }

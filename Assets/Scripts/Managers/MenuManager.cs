@@ -1,16 +1,22 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Buttons")]
+    [SerializeField] Button startButton;
+
+    [Space(20f)]
+    [Header("Other Entities")]
+    [SerializeField] HaloController haloController;
+
+    void Awake()
     {
-        
+        startButton.onClick.AddListener(StartExperience);
     }
 
-    // Update is called once per frame
-    void Update()
+    void StartExperience()
     {
-        
+        haloController.ShowRoom();
     }
 }
