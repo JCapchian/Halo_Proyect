@@ -9,15 +9,19 @@ public class InputManager : MonoBehaviour
     public delegate void OnCameraMovement(Vector2 axis);
     public OnCameraMovement onCameraMovement;
     public delegate void OnInteraction();
-    OnInteraction onInteraction;
+    public OnInteraction onInteraction;
 
     public void DisableControls()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         playerControls.Disable();
     }
 
     public void EnableControls()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         playerControls.Enable();
     }
 

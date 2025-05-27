@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
     [SerializeField] InputManager inputManager;
     public InputManager InputManager { get => inputManager; }
     [SerializeField] CameraHandler cameraHandler;
@@ -14,6 +15,10 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
         Initialize();
     }
 
@@ -23,18 +28,20 @@ public class PlayerController : MonoBehaviour
         cameraHandler.Initialize(this);
         interactionHandler.Initialize(this);
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Start()
     {
 
-        //inputManager.DisableControls();
     }
     #region Execution Functions
 
     private void Update()
     {
         movementHandler.GroundChecker();
+        cameraHandler.HandleRayCast();
     }
 
     private void FixedUpdate()

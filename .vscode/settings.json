@@ -56,5 +56,10 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Halo_Proyect2.sln"
+    "dotnet.defaultSolution": "Halo_Proyect2.sln",
+    "cSpell.words": [
+        "minigame",
+        "raycast",
+        "Struc"
+    ]
 }

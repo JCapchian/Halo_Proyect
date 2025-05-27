@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class HaloController : MonoBehaviour
@@ -9,6 +10,9 @@ public class HaloController : MonoBehaviour
     public void ShowRoom()
     {
         effectsHandler.StopGlowing();
+        Task.WaitAny(effectsHandler.FinishGlowDown());
+        PlayerController.Instance.InputManager.EnableControls();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 

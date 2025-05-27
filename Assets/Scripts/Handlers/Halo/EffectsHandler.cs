@@ -28,7 +28,7 @@ public class EffectsHandler : MonoBehaviour
 
     public void StopGlowing()
     {
-        FinishGlowDown().Start(); ;
+        FinishGlowDown();
     }
 
 
@@ -69,7 +69,7 @@ public class EffectsHandler : MonoBehaviour
         MainLight.range = minGlow;
         await Task.WhenAll(GlowUp());
     }
-    async Task FinishGlowDown()
+    public async Task FinishGlowDown()
     {
         var currentTime = 0f;
         while (currentTime < glowDuration)
