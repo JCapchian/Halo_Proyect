@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.febucci.custom-hierarchy": {
-      "version": "file:C:/Users/jeroc/Downloads/unitypackage-custom-hierarchy-1.2.0/unitypackage-custom-hierarchy-1.2.0",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
