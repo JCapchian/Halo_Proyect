@@ -44,8 +44,8 @@ Material:
     m_Floats:
     - _BaseGradientPower: 0
     - _FresnelPower: 4.25
-    - _GlitterOffset: 0.69
-    - _NoiseRotationSpeed: 3.77
+    - _GlitterOffset: 0.67
+    - _NoiseRotationSpeed: 3.38
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
