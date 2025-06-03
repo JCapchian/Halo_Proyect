@@ -4,8 +4,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
+    GameController gameController;
+
     [SerializeField] InputManager inputManager;
     public InputManager InputManager { get => inputManager; }
+    [SerializeField] GuiHandler guiHandler;
+    public GuiHandler GuiHandler { get => guiHandler; }
     [SerializeField] CameraHandler cameraHandler;
     public CameraHandler CameraHandler { get => cameraHandler; }
     [SerializeField] InteractionHandler interactionHandler;
@@ -13,23 +17,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] MovementHandler movementHandler;
     public MovementHandler MovementHandler { get => movementHandler; }
 
-    private void Awake()
+    public void Initialize(GameController _gameController)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        Initialize();
-    }
+        gameController = _gameController;
 
-    void Initialize()
-    {
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
+
         movementHandler.Initialize(this);
         cameraHandler.Initialize(this);
+        guiHandler.Initialize(this);
         interactionHandler.Initialize(this);
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void Start()

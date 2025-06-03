@@ -1,10 +1,13 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
 public class EffectsHandler : MonoBehaviour
 {
     HaloController haloController;
+
+    CancellationTokenSource cts = new CancellationTokenSource();
 
     [Header("Components")]
     [SerializeField] Light MainLight;
@@ -14,6 +17,7 @@ public class EffectsHandler : MonoBehaviour
     [SerializeField] float minGlow;
 
     [Header("Show Effect")]
+    CancellationToken showToken;
     [SerializeField] Color showColor;
     [SerializeField] float showRange;
     [SerializeField] float showMaxIntensity;
@@ -23,20 +27,25 @@ public class EffectsHandler : MonoBehaviour
     public void Initialize(HaloController _haloController)
     {
         haloController = _haloController;
-        GlowUp();
+
+        showToken = cts.Token;
+        GlowUp(showToken);
     }
 
-    public void StopGlowing()
+    public async Task StopGlowing()
     {
-        FinishGlowDown();
+        cts.Cancel();
+        haloController.gameObject.SetActive(false);
+        await FinishGlowDown();
     }
 
 
-    async Task GlowUp()
+    async Task GlowUp(CancellationToken showToken)
     {
         var currentTime = 0f;
         while (currentTime < glowDuration)
         {
+            showToken.ThrowIfCancellationRequested();
             float t = currentTime / glowDuration;
 
             t = t * t * (3f - 2f * t);
@@ -48,14 +57,15 @@ public class EffectsHandler : MonoBehaviour
         }
 
         MainLight.range = maxGlow;
-        await Task.WhenAll(GlowDown());
+        await Task.WhenAll(GlowDown(showToken));
     }
 
-    async Task GlowDown()
+    async Task GlowDown(CancellationToken showToken)
     {
         var currentTime = 0f;
         while (currentTime < glowDuration)
         {
+            showToken.ThrowIfCancellationRequested();
             float t = currentTime / glowDuration;
 
             t = t * t * (3f - 2f * t);
@@ -67,7 +77,7 @@ public class EffectsHandler : MonoBehaviour
         }
 
         MainLight.range = minGlow;
-        await Task.WhenAll(GlowUp());
+        await Task.WhenAll(GlowUp(showToken));
     }
     public async Task FinishGlowDown()
     {
@@ -78,13 +88,16 @@ public class EffectsHandler : MonoBehaviour
 
             t = t * t * (3f - 2f * t);
 
-            MainLight.range = Mathf.Lerp(MainLight.range, minGlow, t);
+            MainLight.range = Mathf.Lerp(MainLight.range, showRange, t);
+            MainLight.intensity = Mathf.Lerp(MainLight.intensity, showMaxIntensity, t);
+
             currentTime += Time.deltaTime;
 
             await Task.Yield();
         }
 
-        MainLight.range = minGlow;
+        MainLight.range = showRange;
+        MainLight.intensity = showMaxIntensity;
 
     }
 }

@@ -2,27 +2,14 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance;
-    PlayerController playerController;
+    GameController gameController;
 
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource soundSource;
 
-    public void Initialize(PlayerController _playerController)
+    public void Initialize(GameController _gameController)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        playerController = _playerController;
+        gameController = _gameController;
     }
 
     public void PlayOneShot(AudioStruc audioStruc)

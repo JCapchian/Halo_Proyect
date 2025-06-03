@@ -2,22 +2,34 @@ using UnityEngine;
 
 public class BaseMinigame : MonoBehaviour
 {
-    protected AudioManager audioManager;
-    protected PlayerController playerController;
+    GameController gameController;
 
+    PlayerController playerController;
+
+    protected AudioManager audioManager;
     [Header("Components")]
     [SerializeField] BaseInteractable interactObject;
 
     [Header("Effects")]
     [SerializeField] protected AudioStruc winGameClip;
 
-    void Start()
-    {
-        audioManager = AudioManager.Instance;
+    public bool done;
 
-        playerController = PlayerController.Instance;
+    public void Initialize(GameController _gameController)
+    {
+        gameController = _gameController;
+
+        audioManager = gameController.AudioManager;
+
+        playerController = gameController.PlayerController;
     }
-    #region Main Functions
+
+    #region Operation Functions
+
+    public virtual void ActiveMiniGame() { interactObject.gameObject.SetActive(true); }
+
+    #endregion
+    #region Game Functions
 
     public virtual void StartGame() { }
 
@@ -26,6 +38,8 @@ public class BaseMinigame : MonoBehaviour
     public virtual void EndGame()
     {
         interactObject.DisableInteractable();
+        done = true;
+        gameController.RoomManager.CheckGames();
     }
 
     public virtual void CloseMinigame()

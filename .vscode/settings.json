@@ -58,7 +58,11 @@
     },
     "dotnet.defaultSolution": "Halo_Proyect2.sln",
     "cSpell.words": [
+        "lightmap",
+        "Lightmap",
         "minigame",
+        "minigames",
+        "Minigames",
         "raycast",
         "Struc"
     ]

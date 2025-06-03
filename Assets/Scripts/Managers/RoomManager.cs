@@ -1,0 +1,43 @@
+using UnityEngine;
+
+public class RoomManager : MonoBehaviour
+{
+    GameController gameController;
+
+    [Header("Room #1")]
+    [SerializeField] BaseMinigame[] minigamesRoom;
+    [SerializeField] GameObject finalMessage;
+
+    public void Initialize(GameController _gameController)
+    {
+        gameController = _gameController;
+
+        foreach (var game in minigamesRoom)
+        {
+            game.Initialize(gameController);
+        }
+    }
+
+    public void ActiveMinigames()
+    {
+        foreach (var minigame in minigamesRoom)
+        {
+            minigame.ActiveMiniGame();
+        }
+    }
+
+    public void CheckGames()
+    {
+        foreach (var games in minigamesRoom)
+        {
+            if (!games.done)
+                return;
+        }
+        DoneMinigames();
+    }
+
+    public void DoneMinigames()
+    {
+        gameController.MenuManager.ShowFinalMessage();
+    }
+}

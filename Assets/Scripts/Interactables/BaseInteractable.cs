@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour
 {
+    GameController gameController;
     protected AudioManager audioManager;
     protected PlayerController playerController;
 
@@ -12,11 +13,17 @@ public abstract class BaseInteractable : MonoBehaviour
     [SerializeField] protected AudioStruc cantInteractSound;
 
 
-    protected virtual void Start()
+    void Awake()
     {
-        audioManager = AudioManager.Instance;
+        gameController = GameController.Instance;
 
-        playerController = PlayerController.Instance;
+        playerController = gameController.PlayerController;
+        audioManager = gameController.AudioManager;
+    }
+
+    public virtual void ActiveInteractable()
+    {
+        gameObject.SetActive(true);
     }
 
     public virtual void OnPointed() { }

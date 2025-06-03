@@ -4,9 +4,17 @@ using UnityEngine.UI;
 
 public class AssembleMinigame : BaseMinigame
 {
+    [Header("Assemble Minigame")]
+    [Space(20f)]
     [SerializeField] List<DropSlot> slots;
     [SerializeField] Button doneButton;
+    public override void ActiveMiniGame()
+    {
+        base.ActiveMiniGame();
+    }
 
+
+    #region Game Functions
     public override void StartGame()
     {
         base.StartGame();
@@ -29,7 +37,7 @@ public class AssembleMinigame : BaseMinigame
     {
         audioManager.PlayOneShot(winGameClip);
         doneButton.interactable = true;
-        
+
         base.EndGame();
     }
 
@@ -39,5 +47,5 @@ public class AssembleMinigame : BaseMinigame
         base.CloseMinigame();
     }
 
-
+    #endregion
 }

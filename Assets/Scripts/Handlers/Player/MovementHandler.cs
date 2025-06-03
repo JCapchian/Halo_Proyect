@@ -36,7 +36,7 @@ public class MovementHandler : BaseStateMachine<MovementStateType>
     {
         inputManager = playerController.InputManager;
 
-        playerController.InputManager.onMovement += GetAxis;
+        inputManager.onMovement += GetAxis;
 
         LoadStates();
         rigid.linearDamping = groundDrag;

@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class DropSlot : MonoBehaviour, IDropHandler
 {
+    GameController gameController;
     AudioManager audioManager;
 
     [Header("Components")]
@@ -23,9 +24,11 @@ public class DropSlot : MonoBehaviour, IDropHandler
     bool blocked;
     public bool Blocked { get => blocked; }
 
-    void Start()
+    void Awake()
     {
-        audioManager = AudioManager.Instance;
+        gameController = GameController.Instance;
+
+        audioManager = gameController.AudioManager;
     }
 
     /// <summary>Cuando se suelta un objeto encima</summary>

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEditor.ProjectWindowCallback;
+
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -12,14 +12,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField] Canvas canvas;
     [SerializeField] CanvasGroup canvasGroup;
 
-
     [SerializeField] public DropSlot PreviousSlot;
-
-
-    void Start()
-    {
-        //originalPosition = RectTransform.anchoredPosition;
-    }
 
     public void MoveBack()
     {
@@ -30,7 +23,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         image.raycastTarget = false;
     }
-
 
     #region Pointers Functions
 

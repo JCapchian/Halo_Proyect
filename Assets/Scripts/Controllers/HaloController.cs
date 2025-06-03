@@ -3,25 +3,27 @@ using UnityEngine;
 
 public class HaloController : MonoBehaviour
 {
+    GameController gameController;
     [Header("Handlers")]
     [SerializeField] EffectsHandler effectsHandler;
     public EffectsHandler EffectsHandler { get => effectsHandler; }
 
-    public void ShowRoom()
+
+    public void Initialize(GameController _gameController)
     {
-        effectsHandler.StopGlowing();
-        Task.WaitAny(effectsHandler.FinishGlowDown());
-        PlayerController.Instance.InputManager.EnableControls();
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+        gameController = _gameController;
 
-
-    #region Execution Functions
-
-    void Awake()
-    {
         effectsHandler.Initialize(this);
     }
+
+    public async Task ShowRoom()
+    {
+        await effectsHandler.StopGlowing();
+        PlayerController.Instance.InputManager.EnableControls();
+        gameObject.SetActive(false);
+    }
+
+    #region Execution Functions
 
     void Update()
     {
