@@ -26,12 +26,18 @@ public class BaseMinigame : MonoBehaviour
 
     #region Operation Functions
 
-    public virtual void ActiveMiniGame() { interactObject.gameObject.SetActive(true); }
+    public virtual void ActiveMiniGame()
+    {
+        interactObject.gameObject.SetActive(true);
+    }
 
     #endregion
     #region Game Functions
 
-    public virtual void StartGame() { }
+    public virtual void StartGame()
+    {
+        gameController.EffectManager.BlurDepth();
+    }
 
     public virtual void CheckGame() { }
 
@@ -39,13 +45,14 @@ public class BaseMinigame : MonoBehaviour
     {
         interactObject.DisableInteractable();
         done = true;
-        gameController.RoomManager.CheckGames();
     }
 
     public virtual void CloseMinigame()
     {
+        gameController.EffectManager.NormalDepth();
         playerController.InputManager.EnableControls();
         interactObject.DisableInteractable();
+        gameController.RoomManager.CheckGames();
     }
 
     #endregion

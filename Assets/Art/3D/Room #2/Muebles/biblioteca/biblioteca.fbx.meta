@@ -3,7 +3,62 @@ guid: 0fa41cf05f736cb4e820fde31f1ca951
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: biblioteca
+    second: {fileID: 2100000, guid: fd54fd6c0c2d42e4797d4771fe7e92ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: caja
+    second: {fileID: 2100000, guid: a261325debb41964a9dde6ccd872d06f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lapicero
+    second: {fileID: 2100000, guid: 1a28d43a69f1ab84ba7a12b227e44b28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: libros 3
+    second: {fileID: 2100000, guid: e1ebba25cc24ca14683afd99318eeef0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: organizador solo
+    second: {fileID: 2100000, guid: a60a0031fd19b634fa2c527e4cafb8bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: organizadores
+    second: {fileID: 2100000, guid: 54eb3603d385be045a4dab7baac64e2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parlante
+    second: {fileID: 2100000, guid: 87933d80eb0c3d441a01c376f2310a7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: playstation
+    second: {fileID: 2100000, guid: c8fa4a4c4f27ab145ba3166467c8af82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: radio
+    second: {fileID: 2100000, guid: 83668b57f4d9e4947b83605f72c287f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: revista
+    second: {fileID: 2100000, guid: 9ee3d41b7d8c5024281211f0df8e3eee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tijeras
+    second: {fileID: 2100000, guid: b94a0ae4bdcbe954e973719c5e94b5b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,27 +18,48 @@ public class MenuManager : MonoBehaviour
     {
         gameController = _gameController;
 
-        startButton.onClick.AddListener(StartExperience);
+        startButton.onClick.AddListener(StartFunction);
     }
 
-    void StartExperience()
+    public void StartFunction()
     {
-        // Halo Functions
-        gameController.HaloController.EffectsHandler.StopGlowing();
+        StartExperience();
+    }
 
+    public async Task StartExperience()
+    {
+        startButton.gameObject.SetActive(false);
         // Player Functions
         gameController.PlayerController.GuiHandler.StartShowRoom();
-        gameController.PlayerController.InputManager.EnableControls();
+
+        gameController.EffectManager.BlurDepth();
+        // Halo Functions
+        await gameController.HaloController.HaloEffectsHandler.StopGlowing();
+
+        ShowFirstMessage();
+        //gameController.PlayerController.InputManager.EnableControls();
 
         // Managers Functions
         gameController.RoomManager.ActiveMinigames();
         gameController.EffectManager.SwitchLightsBright();
 
-        firstPopup.SetActive(false);
     }
 
     public void ShowFinalMessage()
     {
         finalPopup.SetActive(true);
+        gameController.PlayerController.InputManager.DisableControls();
+    }
+
+    public void ShowFirstMessage()
+    {
+        firstPopup.SetActive(true);
+    }
+
+    public void FirstButton()
+    {
+        firstPopup.SetActive(false);
+        gameController.PlayerController.InputManager.EnableControls();
+        gameController.EffectManager.NormalDepth();
     }
 }

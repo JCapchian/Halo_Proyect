@@ -3,7 +3,22 @@ guid: 7a6e9414680145a42a81ddcf9fa77e2f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lampara
+    second: {fileID: 2100000, guid: 9967fd8f404ecee4280284dafc9a6a0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: peine
+    second: {fileID: 2100000, guid: 64d692204f2c2ec4fb232e73be3bee3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: revista
+    second: {fileID: 2100000, guid: 9ee3d41b7d8c5024281211f0df8e3eee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

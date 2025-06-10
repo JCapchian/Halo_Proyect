@@ -3,7 +3,12 @@ guid: bc2bca22b614a0844879d22022eed2dd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elementos pizarra
+    second: {fileID: 2100000, guid: 8f2bff722ac91f7449b25d7301263306, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

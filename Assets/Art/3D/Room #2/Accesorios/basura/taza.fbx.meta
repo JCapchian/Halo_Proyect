@@ -3,7 +3,12 @@ guid: 6278d7ca1f8236a4f80d3cd0bc4f6bc1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: taza
+    second: {fileID: 2100000, guid: 8fb0f26fd2f62e04194d612a7bbe0539, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

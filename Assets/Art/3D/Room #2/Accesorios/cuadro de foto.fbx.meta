@@ -3,7 +3,12 @@ guid: c589bada30543e04c8f9fe4beb757877
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cuadro de foto
+    second: {fileID: 2100000, guid: f946ef3504949b9438bf0c066b7617e0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,22 @@ guid: 354389692e123b24e9594cb556aa2103
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paragua
+    second: {fileID: 2100000, guid: 252aec5979a8f214a8a73c7f91f063c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: perchero
+    second: {fileID: 2100000, guid: d501bbbffcf6458438c800948afd1991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ropa colgada
+    second: {fileID: 2100000, guid: 9ae13ec82c9af534bbae44bdc10b449a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

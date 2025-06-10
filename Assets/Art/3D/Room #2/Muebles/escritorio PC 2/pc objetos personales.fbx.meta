@@ -3,7 +3,22 @@ guid: b3480e9a0b12b6349a9a23b971739093
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: anteojos
+    second: {fileID: 2100000, guid: f4f869bb2d380b3469446d28a189568a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: anteojos alpha
+    second: {fileID: 2100000, guid: f4f869bb2d380b3469446d28a189568a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pastillas
+    second: {fileID: 2100000, guid: 5689262dd81db9b4a9d5a791b7f1494f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

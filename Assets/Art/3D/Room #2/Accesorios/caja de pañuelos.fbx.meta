@@ -3,7 +3,12 @@ guid: 42a889e72338ce94cb7f22b10622c056
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "caja de pa\xF1uelos"
+    second: {fileID: 2100000, guid: 2798558cb0afda944a87ad875869f7ab, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

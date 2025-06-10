@@ -3,7 +3,12 @@ guid: 3078ee4ff87d27643bf898947c5e0c30
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pastillas
+    second: {fileID: 2100000, guid: 05fd4f2bde0f4294bad49657e30b801c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

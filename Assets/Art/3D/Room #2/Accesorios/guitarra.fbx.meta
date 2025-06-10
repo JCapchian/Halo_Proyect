@@ -3,7 +3,12 @@ guid: 9f71bdefc16a8aa44aeb412b89424ebd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: guitarra
+    second: {fileID: 2100000, guid: 9d2ede57456b9a040bfbe5a8dc5fcf95, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

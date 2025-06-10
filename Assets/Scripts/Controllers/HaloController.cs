@@ -5,20 +5,20 @@ public class HaloController : MonoBehaviour
 {
     GameController gameController;
     [Header("Handlers")]
-    [SerializeField] EffectsHandler effectsHandler;
-    public EffectsHandler EffectsHandler { get => effectsHandler; }
+    [SerializeField] HaloEffectsHandler haloEffectsHandler;
+    public HaloEffectsHandler HaloEffectsHandler { get => haloEffectsHandler; }
 
 
     public void Initialize(GameController _gameController)
     {
         gameController = _gameController;
 
-        effectsHandler.Initialize(this);
+        haloEffectsHandler.Initialize(this);
     }
 
     public async Task ShowRoom()
     {
-        await effectsHandler.StopGlowing();
+        await haloEffectsHandler.StopGlowing();
         PlayerController.Instance.InputManager.EnableControls();
         gameObject.SetActive(false);
     }

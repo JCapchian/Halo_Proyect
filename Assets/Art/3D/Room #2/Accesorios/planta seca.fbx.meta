@@ -3,7 +3,22 @@ guid: f12368800401c8a4497cc36998aad896
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hojas
+    second: {fileID: 2100000, guid: 45d337d7bba90df40a840393d374e43c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: maceta
+    second: {fileID: 2100000, guid: 45d337d7bba90df40a840393d374e43c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tierra
+    second: {fileID: 2100000, guid: 45d337d7bba90df40a840393d374e43c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

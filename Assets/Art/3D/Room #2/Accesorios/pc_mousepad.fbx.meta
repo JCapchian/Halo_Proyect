@@ -3,7 +3,12 @@ guid: af732c1f28d8a684b872b805f993179e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pc_mousepad
+    second: {fileID: 2100000, guid: 661bd6b9c3a58da448a496b76b055a37, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

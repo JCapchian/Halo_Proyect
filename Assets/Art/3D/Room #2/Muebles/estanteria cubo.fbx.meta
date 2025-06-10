@@ -3,7 +3,22 @@ guid: 49a3f5477dfc790468749471059ef5c1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cajas estanteria cubo
+    second: {fileID: 2100000, guid: 068d3250cf36a02428e012073f609582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: estanteria cubo
+    second: {fileID: 2100000, guid: 0d7cc3dcca845d645b3ff751095db70e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: libros
+    second: {fileID: 2100000, guid: f43699bd63e026c4cb1659612fdede9d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,17 @@ guid: d85d4909c34bc8140a054d8162e40120
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: almohadones
+    second: {fileID: 2100000, guid: 93042351d94dd7944b1696e204d6b8b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sillon
+    second: {fileID: 2100000, guid: 6e5912e23190d5345bd51c8bde24f93d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: a3901f9bb2cae79409be88d88c27f6cc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plancha
+    second: {fileID: 2100000, guid: 36cf168e955521b4583a702ba4a8d9d5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

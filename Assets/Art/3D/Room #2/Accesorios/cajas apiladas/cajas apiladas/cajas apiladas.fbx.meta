@@ -3,7 +3,12 @@ guid: d0048c7e336a09b4ebbf12b55c65b3ac
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: papelera
+    second: {fileID: 2100000, guid: 110d24599a85aa44a8c4d8261e5b024a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

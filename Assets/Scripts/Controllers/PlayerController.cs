@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] InputManager inputManager;
     public InputManager InputManager { get => inputManager; }
+    [SerializeField] PlayerEffectsHandler playerEffectsHandler;
+    public PlayerEffectsHandler PlayerEffectsHandler { get => playerEffectsHandler; }
     [SerializeField] GuiHandler guiHandler;
     public GuiHandler GuiHandler { get => guiHandler; }
     [SerializeField] CameraHandler cameraHandler;
@@ -26,7 +28,9 @@ public class PlayerController : MonoBehaviour
         else
             Instance = this;
 
+        inputManager.Initialize();
         movementHandler.Initialize(this);
+        playerEffectsHandler.Initialize(this);
         cameraHandler.Initialize(this);
         guiHandler.Initialize(this);
         interactionHandler.Initialize(this);

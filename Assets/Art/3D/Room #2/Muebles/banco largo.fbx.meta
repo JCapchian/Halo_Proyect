@@ -3,7 +3,17 @@ guid: 9906391babfb8864c9523e98cf11da5d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: almohadones
+    second: {fileID: 2100000, guid: 93042351d94dd7944b1696e204d6b8b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: banco largo
+    second: {fileID: 2100000, guid: 93042351d94dd7944b1696e204d6b8b8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

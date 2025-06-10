@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
         playerControls.Enable();
     }
 
-    private void OnEnable()
+    public void Initialize()
     {
         if (playerControls == null)
         {

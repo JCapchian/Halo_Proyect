@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
         menuManager.Initialize(this);
         roomManager.Initialize(this);
 
+        effectManager.StartMusic();
     }
 
 }

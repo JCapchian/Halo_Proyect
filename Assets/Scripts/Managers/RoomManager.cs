@@ -38,6 +38,9 @@ public class RoomManager : MonoBehaviour
 
     public void DoneMinigames()
     {
+        gameController.EffectManager.CancelDepth();
+        gameController.EffectManager.BlurDepth();
+        gameController.PlayerController.InputManager.DisableControls();
         gameController.MenuManager.ShowFinalMessage();
     }
 }
