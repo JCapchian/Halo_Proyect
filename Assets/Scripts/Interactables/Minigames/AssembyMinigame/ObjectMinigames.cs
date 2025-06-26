@@ -15,10 +15,9 @@ public class ObjectMinigames : BaseInteractable
 
         audioManager.PlayOneShot(interactSound);
 
-        Debug.Log("Interact");
         playerController.InputManager.DisableControls();
         minigame.StartGame();
-        
+
         base.Interact();
     }
 }

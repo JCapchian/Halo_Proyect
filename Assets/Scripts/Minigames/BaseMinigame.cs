@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BaseMinigame : MonoBehaviour
 {
-    GameController gameController;
+    protected GameController gameController;
 
     PlayerController playerController;
 

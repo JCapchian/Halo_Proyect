@@ -1409,6 +1409,7 @@ MonoBehaviour:
   winGameClip:
     Clip: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     Type: 1
+  done: 0
   slots:
   - {fileID: 3535275641198408114}
   - {fileID: 9121241793675803233}

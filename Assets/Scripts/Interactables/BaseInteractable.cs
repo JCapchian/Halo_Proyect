@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour
 {
-    GameController gameController;
+    protected GameController gameController;
     protected AudioManager audioManager;
     protected PlayerController playerController;
 
@@ -27,12 +27,7 @@ public abstract class BaseInteractable : MonoBehaviour
     }
 
     public virtual void OnPointed() { }
-    public virtual void Interact()
-    {
-
-
-
-    }
+    public virtual void Interact() { }
     public virtual void NotInteract() { }
     public virtual void OnNotPointed() { }
 

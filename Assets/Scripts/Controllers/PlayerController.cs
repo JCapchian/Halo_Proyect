@@ -36,9 +36,10 @@ public class PlayerController : MonoBehaviour
         interactionHandler.Initialize(this);
     }
 
-    public void Start()
+    public void ResetPlayerPosition()
     {
-
+        gameObject.transform.position = gameController.MenuManager.SpawnSceneTransform.position;
+        gameObject.transform.rotation = gameController.MenuManager.SpawnSceneTransform.rotation;
     }
     #region Execution Functions
 

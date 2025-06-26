@@ -6,7 +6,7 @@ public class PlayerEffectsHandler : MonoBehaviour
 {
     PlayerController playerController;
 
-    Camera playerViewCamera;
+    [SerializeField] GameObject playerFlashlight;
 
 
     public void Initialize(PlayerController _playerController)
@@ -14,8 +14,13 @@ public class PlayerEffectsHandler : MonoBehaviour
         playerController = _playerController;
     }
 
-    void ControlBlur()
+    public void TurnOnFlashLight()
     {
+        playerFlashlight.SetActive(true);
+    }
 
+    public void TurnOffFlashLight()
+    {
+        playerFlashlight.SetActive(false);
     }
 }

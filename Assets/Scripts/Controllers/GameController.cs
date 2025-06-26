@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     public MenuManager MenuManager { get => menuManager; }
     [SerializeField] EffectManager effectManager;
     public EffectManager EffectManager { get => effectManager; }
+    [SerializeField] SceneController sceneController;
+    public SceneController SceneController { get => sceneController; }
 
     void Awake()
     {
@@ -29,19 +31,28 @@ public class GameController : MonoBehaviour
         else
             Instance = this;
 
+        DontDestroyOnLoad(this);
         // Controllers
         playerController.Initialize(this);
+        DontDestroyOnLoad(playerController);
         haloController.Initialize(this);
+        DontDestroyOnLoad(haloController);
 
         PlayerController.InputManager.DisableControls();
 
         // Managers
         audioManager.Initialize(this);
         effectManager.Initialize(this);
-        menuManager.Initialize(this);
         roomManager.Initialize(this);
+        sceneController.Initialize(this);
+        FindMenuManager();
 
         effectManager.StartMusic();
     }
 
+    public void FindMenuManager()
+    {
+        menuManager = FindAnyObjectByType<MenuManager>();
+        menuManager.Initialize(this);
+    }
 }

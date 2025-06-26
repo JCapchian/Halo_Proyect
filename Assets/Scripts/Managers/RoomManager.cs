@@ -6,7 +6,10 @@ public class RoomManager : MonoBehaviour
 
     [Header("Room #1")]
     [SerializeField] BaseMinigame[] minigamesRoom;
-    [SerializeField] GameObject finalMessage;
+
+    [Header("Room #2")]
+    [SerializeField] BaseMinigame findLetters;
+    public BaseMinigame FindLetters { get => findLetters; }
 
     public void Initialize(GameController _gameController)
     {
@@ -16,6 +19,11 @@ public class RoomManager : MonoBehaviour
         {
             game.Initialize(gameController);
         }
+    }
+
+    public void FindMinigame()
+    {
+        findLetters = FindAnyObjectByType<BaseMinigame>();
     }
 
     public void ActiveMinigames()
@@ -38,7 +46,7 @@ public class RoomManager : MonoBehaviour
 
     public void DoneMinigames()
     {
-        gameController.EffectManager.CancelDepth();
+        //gameController.EffectManager.CancelDepth();
         gameController.EffectManager.BlurDepth();
         gameController.PlayerController.InputManager.DisableControls();
         gameController.MenuManager.ShowFinalMessage();

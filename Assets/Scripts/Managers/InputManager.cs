@@ -35,6 +35,7 @@ public class InputManager : MonoBehaviour
             playerControls.Player.Look.performed += i => onCameraMovement?.Invoke(i.ReadValue<Vector2>());
 
             playerControls.Player.Interact.performed += i => onInteraction?.Invoke();
+            playerControls.Player.Interact.performed += i => Debug.Log("click"); ;
         }
 
         playerControls.Enable();

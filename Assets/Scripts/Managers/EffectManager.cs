@@ -78,7 +78,6 @@ public class EffectManager : MonoBehaviour
     }
     public void SwitchLightsBright()
     {
-        Debug.Log("Bright");
         LightmapSettings.lightmaps = brightLightmap;
     }
     #endregion

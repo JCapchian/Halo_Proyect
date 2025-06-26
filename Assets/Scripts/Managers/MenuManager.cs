@@ -7,18 +7,20 @@ public class MenuManager : MonoBehaviour
 {
     GameController gameController;
 
-    [Header("Buttons")]
     [SerializeField] Button startButton;
 
     [Header("Popup")]
     [SerializeField] GameObject firstPopup;
     [SerializeField] GameObject finalPopup;
 
+    [Header("Others")]
+    [SerializeField] Transform spawnSceneTransform;
+
+    public Transform SpawnSceneTransform { get => spawnSceneTransform; }
+
     public void Initialize(GameController _gameController)
     {
         gameController = _gameController;
-
-        startButton.onClick.AddListener(StartFunction);
     }
 
     public void StartFunction()
@@ -26,7 +28,7 @@ public class MenuManager : MonoBehaviour
         StartExperience();
     }
 
-    public async Task StartExperience()
+    async Task StartExperience()
     {
         startButton.gameObject.SetActive(false);
         // Player Functions
@@ -42,7 +44,6 @@ public class MenuManager : MonoBehaviour
         // Managers Functions
         gameController.RoomManager.ActiveMinigames();
         gameController.EffectManager.SwitchLightsBright();
-
     }
 
     public void ShowFinalMessage()
@@ -55,11 +56,22 @@ public class MenuManager : MonoBehaviour
     {
         firstPopup.SetActive(true);
     }
-
+    #region Buttons Region
     public void FirstButton()
     {
+        Debug.Log("PrimerMensaje");
         firstPopup.SetActive(false);
         gameController.PlayerController.InputManager.EnableControls();
         gameController.EffectManager.NormalDepth();
     }
+
+    public void FinalButton()
+    {
+        finalPopup.SetActive(false);
+        gameController.PlayerController.InputManager.DisableControls();
+        gameController.EffectManager.NormalDepth();
+
+        gameController.SceneController.StartTransition();
+    }
+    #endregion
 }

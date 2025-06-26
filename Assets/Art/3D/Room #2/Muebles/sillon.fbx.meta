@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: almohadones
-    second: {fileID: 2100000, guid: 93042351d94dd7944b1696e204d6b8b8, type: 2}
+    second: {fileID: 2100000, guid: 901d016c9de40204fbd688a8c8ed7c70, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

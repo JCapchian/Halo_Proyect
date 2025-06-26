@@ -1,4 +1,4 @@
-//using System;
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -12,6 +12,7 @@ public class CameraHandler : MonoBehaviour
     [SerializeField] Transform playerBody;
     [SerializeField] Camera viewCamera;
     public Camera ViewCamera { get => viewCamera; }
+    [SerializeField] GameObject flashlightObject;
     Ray playerRay;
     RaycastHit hitInfo;
     [SerializeField] int distanciaRayo;
@@ -42,6 +43,8 @@ public class CameraHandler : MonoBehaviour
         playerController = _playerController;
 
         playerController.InputManager.onCameraMovement += GetAxis;
+
+        DisableFlashlight();
     }
 
     public void GetAxis(Vector2 _axis)
@@ -60,7 +63,7 @@ public class CameraHandler : MonoBehaviour
 
         cameraCap -= currentMouseDelta.y * sensitivity;
 
-        cameraCap = Mathf.Clamp(cameraCap, -50f, 50f);
+        cameraCap = Mathf.Clamp(cameraCap, -90f, 90f);
 
         currentRotation = Vector3.right * cameraCap;
 
@@ -100,6 +103,7 @@ public class CameraHandler : MonoBehaviour
             if (playerController.InputManager.onInteraction == null)
                 playerController.InputManager.onInteraction += pickUpObject.Interact;
 
+
             pickUpObject.OnPointed();
             //guiManager.ShowInteractGui(pickUpObject);
         }
@@ -113,6 +117,25 @@ public class CameraHandler : MonoBehaviour
                 pickUpObject = null;
             }
         }
+    }
+
+    public void IncreasePickupRange(int newValue)
+    {
+        distanciaRayo = newValue;
+    }
+
+    #endregion
+
+    #region Flashlight
+
+    public void EnableFlashlight()
+    {
+        flashlightObject.SetActive(true);
+    }
+
+    public void DisableFlashlight()
+    {
+        flashlightObject.SetActive(false);
     }
 
     #endregion

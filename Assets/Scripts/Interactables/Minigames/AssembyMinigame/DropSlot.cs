@@ -34,7 +34,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
     /// <summary>Cuando se suelta un objeto encima</summary>
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop");
         // Si no esta bloqueado realiza el chequeo
         if (Blocked)
             return;
