@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
         sceneController.Initialize(this);
         FindMenuManager();
 
-        effectManager.StartMusic();
+        effectManager.StartRoom1Music();
     }
 
     public void FindMenuManager()

@@ -15,7 +15,7 @@ public class BaseMinigame : MonoBehaviour
 
     public bool done;
 
-    public void Initialize(GameController _gameController)
+    public virtual void Initialize(GameController _gameController)
     {
         gameController = _gameController;
 
@@ -36,6 +36,8 @@ public class BaseMinigame : MonoBehaviour
 
     public virtual void StartGame()
     {
+        gameController.PlayerController.MovementHandler.StopMovement();
+        gameController.PlayerController.CameraHandler.StopMovement();
         gameController.EffectManager.BlurDepth();
     }
 
@@ -49,8 +51,12 @@ public class BaseMinigame : MonoBehaviour
 
     public virtual void CloseMinigame()
     {
-        gameController.EffectManager.NormalDepth();
+
+        gameController.PlayerController.CameraHandler.ResumeMovement();
+        gameController.PlayerController.MovementHandler.ResumeMovement();
         playerController.InputManager.EnableControls();
+
+        gameController.EffectManager.NormalDepth();
         interactObject.DisableInteractable();
         gameController.RoomManager.CheckGames();
     }

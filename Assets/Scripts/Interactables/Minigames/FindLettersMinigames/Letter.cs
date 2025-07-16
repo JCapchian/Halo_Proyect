@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Letter : ObjectMinigames
+public class Letter : BaseInteractable
 {
     [Header("Components")]
     [SerializeField] FindLettersMinigame minigame;
@@ -8,13 +8,16 @@ public class Letter : ObjectMinigames
 
     public override void Interact()
     {
-        if (blocked)
-            return;
+        // if (blocked)
+        //     return;
 
         audioManager.PlayOneShot(interactSound);
 
         gameController.PlayerController.GuiHandler.AddLetter(letterPosition);
-        gameController.RoomManager.FindLetters.ActiveMiniGame();
+        minigame.ActiveMiniGame();
+
+        gameObject.SetActive(false);
+
         base.Interact();
     }
 

@@ -49,6 +49,7 @@ public class MenuManager : MonoBehaviour
     public void ShowFinalMessage()
     {
         finalPopup.SetActive(true);
+        gameController.EffectManager.BlurDepth();
         gameController.PlayerController.InputManager.DisableControls();
     }
 
@@ -59,7 +60,6 @@ public class MenuManager : MonoBehaviour
     #region Buttons Region
     public void FirstButton()
     {
-        Debug.Log("PrimerMensaje");
         firstPopup.SetActive(false);
         gameController.PlayerController.InputManager.EnableControls();
         gameController.EffectManager.NormalDepth();
@@ -69,8 +69,8 @@ public class MenuManager : MonoBehaviour
     {
         finalPopup.SetActive(false);
         gameController.PlayerController.InputManager.DisableControls();
-        gameController.EffectManager.NormalDepth();
-
+        gameController.PlayerController.CameraHandler.ClearInteractables();
+        gameController.PlayerController.CameraHandler.IncreasePickupRange(0);
         gameController.SceneController.StartTransition();
     }
     #endregion

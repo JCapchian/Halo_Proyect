@@ -24,6 +24,7 @@ public class RoomManager : MonoBehaviour
     public void FindMinigame()
     {
         findLetters = FindAnyObjectByType<BaseMinigame>();
+        findLetters.Initialize(gameController);
     }
 
     public void ActiveMinigames()

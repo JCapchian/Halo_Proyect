@@ -13,7 +13,7 @@ public abstract class BaseInteractable : MonoBehaviour
     [SerializeField] protected AudioStruc cantInteractSound;
 
 
-    void Awake()
+    void Start()
     {
         gameController = GameController.Instance;
 

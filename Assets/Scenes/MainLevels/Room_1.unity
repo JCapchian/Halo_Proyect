@@ -1702,19 +1702,43 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 147082394653328098, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ccad77bcce672041ab5fd94384811fd, type: 3}
+    - target: {fileID: 147082394653328098, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1acc1aa6e2967dc4ead3958a626785da, type: 3}
+    - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1998110914889085472, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ebb09b9f86cae014d8944eb5faee9251, type: 3}
+      objectReference: {fileID: 21300000, guid: 28f2bfe761bee7242ba2886d6f132aa8, type: 3}
     - target: {fileID: 3496964339917403128, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_text
       value: "El proceso nunca es lineal, bocetos, errores, formas que no sab\xEDan
         a d\xF3nde iban. Orden\xE1 estos tres momentos."
       objectReference: {fileID: 0}
+    - target: {fileID: 3535275641198408114, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 3535275641198408114, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     - target: {fileID: 3613093133323801924, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: interactObject
       value: 
@@ -1723,10 +1747,26 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 3846806640137647292, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f751a7603e96ebe49ba8022cd6d90530, type: 3}
+    - target: {fileID: 3846806640137647292, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3902205896372489283, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 44581863accb3534f9fef0e94a176867, type: 3}
+      objectReference: {fileID: 21300000, guid: c3dab22070d22574f990269c3cd0f816, type: 3}
+    - target: {fileID: 5289244573866322845, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 5289244573866322845, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     - target: {fileID: 6484394125147318475, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1818,7 +1858,15 @@ PrefabInstance:
     - target: {fileID: 7811573960773206163, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5043540d858106545930aecf341c5a3e, type: 3}
+      objectReference: {fileID: 21300000, guid: 529a3050e6f6f104baa8ceb1f567f8e9, type: 3}
+    - target: {fileID: 9121241793675803233, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 9121241793675803233, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7310,7 +7358,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c80e8cfe717bac94cac9228c387fa171, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 518e95a449d106647a41018a6cd8c0f0, type: 2}
+      objectReference: {fileID: 2100000, guid: 6d7c8b7db94a0e3489c73142d32d5241, type: 2}
     - target: {fileID: -7511558181221131132, guid: c80e8cfe717bac94cac9228c387fa171, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -7957,20 +8005,44 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 147082394653328098, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cfc14425c01c0af4d87f327311019d25, type: 3}
+    - target: {fileID: 147082394653328098, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b417c160c15f464f873bb8eb24cb44f, type: 3}
+    - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1998110914889085472, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0745eb087c442db428353336f4b85b50, type: 3}
+      objectReference: {fileID: 21300000, guid: e549d424b46374c4ca85e4666f0279dd, type: 3}
     - target: {fileID: 3496964339917403128, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_text
       value: "Crear es tambi\xE9n manchar, borrar, volver a intentar.\nEstas tres
         im\xE1genes muestran lo que queda despu\xE9s de la acci\xF3n.\LOrden\xE1
         estos tres momentos."
       objectReference: {fileID: 0}
+    - target: {fileID: 3535275641198408114, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 3535275641198408114, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     - target: {fileID: 3613093133323801924, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: interactObject
       value: 
@@ -7979,10 +8051,26 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 3846806640137647292, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f06cf55814bddf54ab511c591d71d305, type: 3}
+    - target: {fileID: 3846806640137647292, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3902205896372489283, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9d23281e742b18948a71290e6dc12cc6, type: 3}
+      objectReference: {fileID: 21300000, guid: 6be2c57ec34c64349b9162445adc7613, type: 3}
+    - target: {fileID: 5289244573866322845, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 5289244573866322845, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     - target: {fileID: 6484394125147318475, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8074,7 +8162,15 @@ PrefabInstance:
     - target: {fileID: 7811573960773206163, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3bb35d9de1e62fb49b079979fc18e7be, type: 3}
+      objectReference: {fileID: 21300000, guid: 391be5871586f7d42a94a934267bd64f, type: 3}
+    - target: {fileID: 9121241793675803233, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 9121241793675803233, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8856,6 +8952,14 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 5173440342484773043, guid: 5ed79dd5489e42446900687fd1e0e3f1, type: 3}
+      propertyPath: room1Music.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 776b27c0c2ea60747b927b0183651baa, type: 3}
+    - target: {fileID: 5173440342484773043, guid: 5ed79dd5489e42446900687fd1e0e3f1, type: 3}
+      propertyPath: room2Music.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 65ebd954f5d78b548b9557888f9bedd8, type: 3}
+    - target: {fileID: 5173440342484773043, guid: 5ed79dd5489e42446900687fd1e0e3f1, type: 3}
       propertyPath: darkLightmapDir.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -9140,10 +9244,34 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 147082394653328098, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed7b01986c6ed4346aca0c525e9bb4ed, type: 3}
     - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 57dd29e713583ef4fac0eb2f9d661da4, type: 3}
+    - target: {fileID: 1749424735246841432, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998110914889085472, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e65be47803531774c8e2ec94b1b66d11, type: 3}
+    - target: {fileID: 3535275641198408114, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 3535275641198408114, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     - target: {fileID: 3613093133323801924, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: interactObject
       value: 
@@ -9152,6 +9280,26 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 306779804}
+    - target: {fileID: 3846806640137647292, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ffd13816b741aed438cdaa737704a377, type: 3}
+    - target: {fileID: 3846806640137647292, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: pickAudio.Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902205896372489283, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c79fba9458e67314cb938219ebb229f3, type: 3}
+    - target: {fileID: 5289244573866322845, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 5289244573866322845, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     - target: {fileID: 6484394125147318475, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9240,6 +9388,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7811573960773206163, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0954c53bf742aa46abcba2c27151eb4, type: 3}
+    - target: {fileID: 9121241793675803233, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: dropSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
+    - target: {fileID: 9121241793675803233, guid: 72aea6172b75d2c4e9fd5dc648b210fb, type: 3}
+      propertyPath: blockedSound.Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e62becb901793974f88800f1a8f7cd84, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

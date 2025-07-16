@@ -17,16 +17,21 @@ public class EffectManager : MonoBehaviour
     LightmapData[] brightLightmap, darkLightmap;
 
     [Space(20f)]
+    [SerializeField] Volume volume;
     [Header("Depth of Field")]
     CancellationTokenSource cts = new CancellationTokenSource();
     CancellationToken depthToken;
-    [SerializeField] Volume volume;
     DepthOfField depthOf;
     [SerializeField] float blurDuration;
+    [Space(20f)]
+    [Header("Color Adjustment")]
+    ColorAdjustments colorAdj;
+
 
     [Space(20f)]
     [Header("Music")]
-    [SerializeField] AudioStruc musicStruc;
+    [SerializeField] AudioStruc room1Music;
+    [SerializeField] AudioStruc room2Music;
 
     public void Initialize(GameController _gameController)
     {
@@ -66,6 +71,14 @@ public class EffectManager : MonoBehaviour
         if (volume.profile.TryGet<DepthOfField>(out depthOf))
         {
             depthOf.active = true;
+        }
+        depthToken = cts.Token;
+        #endregion
+
+        #region Color Adjustment
+        if (volume.profile.TryGet<ColorAdjustments>(out colorAdj))
+        {
+            colorAdj.active = true;
         }
         depthToken = cts.Token;
         #endregion
@@ -125,8 +138,28 @@ public class EffectManager : MonoBehaviour
     }
     #endregion
 
-    public void StartMusic()
+    #region Color Adjustment
+
+    public void EnableColorAdjustment()
     {
-        gameController.AudioManager.PlayMusic(musicStruc);
+
+    }
+
+    public void DisableColorAdjustment()
+    {
+
+    }
+
+    #endregion
+
+    public void StartRoom1Music()
+    {
+        gameController.AudioManager.StopAudioClip(room1Music.Type);
+        gameController.AudioManager.PlayMusic(room1Music);
+    }
+    public void StartRoom2Music()
+    {
+        gameController.AudioManager.StopAudioClip(room2Music.Type);
+        gameController.AudioManager.PlayMusic(room2Music);
     }
 }

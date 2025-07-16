@@ -41,9 +41,9 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void StopAudioClip(AudioStruc audioStruc)
+    public void StopAudioClip(AudioType audioType)
     {
-        switch (audioStruc.Type)
+        switch (audioType)
         {
             case AudioType.Music:
                 musicSource.clip = null;

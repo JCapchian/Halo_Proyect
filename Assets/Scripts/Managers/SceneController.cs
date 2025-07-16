@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,13 +30,17 @@ public class SceneController : MonoBehaviour
 
     void EnterNewScene(Scene scene, LoadSceneMode mode)
     {
-        gameController.FindMenuManager();
-        gameController.PlayerController.ResetPlayerPosition();
-        gameController.EffectManager.NormalDepth();
-        gameController.PlayerController.GuiHandler.FadeOutEffect();
+        //Efectos Escena
         gameController.RoomManager.FindMinigame();
+        gameController.FindMenuManager();
+        gameController.EffectManager.StartRoom2Music();
 
-        //gameController.PlayerController.CameraHandler.IncreasePickupRange(100);
+        //Efectos Jugador
+        gameController.EffectManager.NormalDepth();
+        gameController.PlayerController.ResetPlayerPosition();
+        gameController.PlayerController.GuiHandler.FadeOutEffect();
+
+        gameController.PlayerController.CameraHandler.IncreasePickupRange(100);
         gameController.PlayerController.PlayerEffectsHandler.TurnOnFlashLight();
 
         SceneManager.sceneLoaded -= EnterNewScene;

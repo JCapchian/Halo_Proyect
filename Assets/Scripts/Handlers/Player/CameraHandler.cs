@@ -31,6 +31,8 @@ public class CameraHandler : MonoBehaviour
     float cameraCap;
     [SerializeField][Range(0.1f, 1f)] float sensitivity;
 
+    bool stop;
+
     Vector2 axis;
 
     private Vector3 currentRotation;
@@ -58,6 +60,8 @@ public class CameraHandler : MonoBehaviour
 
     public void HandleRotation()
     {
+        if (stop)
+            return;
         Vector2 targetMouseDelta = axis;
         currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
 
@@ -70,6 +74,17 @@ public class CameraHandler : MonoBehaviour
         ViewCamera.transform.localEulerAngles = currentRotation;
 
         playerBody.Rotate(Vector3.up * currentMouseDelta.x * sensitivity);
+    }
+
+    public void StopMovement()
+    {
+        playerController.InputManager.onCameraMovement -= GetAxis;
+        axis = Vector2.zero;
+    }
+
+    public void ResumeMovement()
+    {
+        playerController.InputManager.onCameraMovement += GetAxis;
     }
 
     public void HandleRayCast()
@@ -101,7 +116,9 @@ public class CameraHandler : MonoBehaviour
 
             pickUpObject = hitInfo.collider.GetComponent<BaseInteractable>();
             if (playerController.InputManager.onInteraction == null)
+            {
                 playerController.InputManager.onInteraction += pickUpObject.Interact;
+            }
 
 
             pickUpObject.OnPointed();
@@ -116,6 +133,16 @@ public class CameraHandler : MonoBehaviour
                 //guiManager.HidePickupsGui();
                 pickUpObject = null;
             }
+        }
+    }
+
+    public void ClearInteractables()
+    {
+        if (pickUpObject != null)
+        {
+            playerController.InputManager.onInteraction -= pickUpObject.Interact;
+            pickUpObject.OnNotPointed();
+            pickUpObject = null;
         }
     }
 

@@ -3,15 +3,12 @@ using UnityEngine;
 public class ObjectMinigames : BaseInteractable
 {
     [Header("Components")]
-    [SerializeField] BaseMinigame minigame;
+    [SerializeField] protected BaseMinigame minigame;
 
     public override void Interact()
     {
         if (blocked)
-        {
-
             return;
-        }
 
         audioManager.PlayOneShot(interactSound);
 

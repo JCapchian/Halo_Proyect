@@ -11,6 +11,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public RectTransform RectTransform { get => rectTransform; }
     [SerializeField] Canvas canvas;
     [SerializeField] CanvasGroup canvasGroup;
+    [SerializeField] AudioStruc pickAudio;
 
     [SerializeField] public DropSlot PreviousSlot;
 
@@ -33,6 +34,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        GameController.Instance.AudioManager.PlayOneShot(pickAudio);
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
     }

@@ -46,6 +46,7 @@ public class MovementHandler : BaseStateMachine<MovementStateType>
     {
         dictionaryStates = new Dictionary<MovementStateType, BaseState<MovementStateType>>();
 
+        dictionaryStates.Add(MovementStateType.Stop, new StopState(MovementStateType.Stop, this));
         dictionaryStates.Add(MovementStateType.Idle, new IdleState(MovementStateType.Idle, this));
         dictionaryStates.Add(MovementStateType.Walk, new WalkState(MovementStateType.Walk, this, walkSpeed, groundDrag));
         dictionaryStates.Add(MovementStateType.Air, new AirState(MovementStateType.Air, this, groundDrag, airDrag));
@@ -70,36 +71,25 @@ public class MovementHandler : BaseStateMachine<MovementStateType>
 
     public void GroundChecker()
     {
+        if (currentState == dictionaryStates[MovementStateType.Stop]) return;
+
         Ray ray = new Ray(transform.position, Vector3.down);
         isGrounded = Physics.Raycast(ray, 0.3f + groundDistance, groundMask);
 
         if (!isGrounded) SwitchState(MovementStateType.Air);
+
         if (currentState == dictionaryStates[MovementStateType.Air])
             if (isGrounded)
                 SwitchState(MovementStateType.Idle);
     }
 
-    // public void Jump()
-    // {
-    //     if (!isGrounded)
-    //         return;
-
-    //     SwitchState("Jump");
-    //     Vector3 jumpDirection = transform.up * jumpForce * 5f;
-    //     rigid.AddForce(jumpDirection, ForceMode.Impulse);
-    // }
-
-    // public void ChangeDrag(float newDrag)
-    // {
-    //     rigid.drag = newDrag;
-    // }
-    // public void ChangeMass(float newMass)
-    // {
-    //     rigid.mass = newMass;
-    // }
-
-    private void OnDrawGizmos()
+    public void StopMovement()
     {
-        Debug.DrawRay(orientation.position * 0.2f, Vector3.down);
+        SwitchState(MovementStateType.Stop);
+    }
+
+    public void ResumeMovement()
+    {
+        SwitchState(MovementStateType.Idle);
     }
 }
