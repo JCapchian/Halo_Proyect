@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class DropSlot : MonoBehaviour, IDropHandler
 {
@@ -17,7 +18,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
     [SerializeField] AudioStruc blockedSound;
 
     [Header("Minigame")]
-    [SerializeField] AssembleMinigame mainMinigame;
+    [SerializeField] BaseMinigame mainMinigame;
     [SerializeField] DragDrop currentObject;
     [SerializeField] DragDrop desiredObject;
 
@@ -89,6 +90,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
 
         // Effects
         audioManager.PlayOneShot(blockedSound);
-        frame.color = blockedColor;
+        frame.enabled = true;
+        // frame.color = blockedColor;
     }
 }

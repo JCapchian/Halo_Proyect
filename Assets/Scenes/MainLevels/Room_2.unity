@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2188455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -186,8 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -969,7 +970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &143740557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1019,8 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -1084,7 +1086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXPLORA EL CUARTO PARA ENCONTRAR PARTE DE LA PALABRA QUE TENES QUE INGRESAR
+  m_text: "Explor\xE1 el cuarto para encontrar las letras y formar la palabra"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 374c5155aa56de746802239fb2cfe9c3, type: 2}
   m_sharedMaterial: {fileID: 6875920600496710787, guid: 374c5155aa56de746802239fb2cfe9c3, type: 2}
@@ -1117,7 +1119,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
@@ -1194,6 +1196,7 @@ RectTransform:
   - {fileID: 227515924}
   - {fileID: 1149419053}
   - {fileID: 292910845}
+  - {fileID: 892606098}
   m_Father: {fileID: 1737502917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1576,7 +1579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &227515924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2609,7 +2612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &398994469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2659,8 +2662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -5454,7 +5458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &816542351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5504,8 +5508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -5582,6 +5587,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a3958619e7443b4f95ebc85a347f5d2, type: 3}
   m_PrefabInstance: {fileID: 882026434}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &892606097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892606098}
+  - component: {fileID: 892606100}
+  - component: {fileID: 892606099}
+  m_Layer: 5
+  m_Name: BackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &892606098
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892606097}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000029295683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 144369098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00048828125, y: 0}
+  m_SizeDelta: {x: 1820, y: 980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &892606099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892606097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7882353}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &892606100
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892606097}
+  m_CullTransparentMesh: 1
 --- !u!1001 &894152837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6120,7 +6200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &960755888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6170,8 +6250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -6319,8 +6400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -9590,8 +9672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87d34ae8ebe05e4b9319c3fc7ddbebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 1595153809}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 203a3ff013a1ad646a101f49f4d55940, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -10764,7 +10847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1716833133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10814,8 +10897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}
@@ -10854,9 +10938,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dab1c65dd9a004fa751c0609daf904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PopUps:
+  - {fileID: 11400000, guid: 39c44ef6d41db2247a728f0ca9074fb1, type: 2}
+  - {fileID: 11400000, guid: 2046754463737564a860e7b141d7d1ea, type: 2}
+  - {fileID: 11400000, guid: 923bc31dc7a31e948b913c0a78909d05, type: 2}
+  scenePopUps: []
+  popUpContainer: {fileID: 144369098}
   startButton: {fileID: 1018413735}
-  firstPopup: {fileID: 227515923}
-  finalPopup: {fileID: 292910844}
+  finalPopupDialog:
+    Clip: {fileID: 8300000, guid: 1fc45ee176d5a6e45a43718b9383bd23, type: 3}
+    Type: 2
+  backgroundPopUp: {fileID: 892606097}
   spawnSceneTransform: {fileID: 815324741}
 --- !u!114 &1737502914
 MonoBehaviour:
@@ -12026,20 +12118,31 @@ MonoBehaviour:
     Clip: {fileID: 0}
     Type: 0
   done: 0
+  computer: {fileID: 1595153808}
   words:
-  - Esfuerzo
-  - Creatividad
+  - esfuerzo
+  - creatividad
   actualWord: 
+  letters:
+  - {fileID: 2030848832}
+  - {fileID: 960755887}
+  - {fileID: 992228457}
+  - {fileID: 816542350}
+  - {fileID: 1716833132}
+  - {fileID: 143740556}
+  - {fileID: 2188454}
+  - {fileID: 398994468}
   findLetterScreen: {fileID: 1510142912}
   textScreen: {fileID: 1365535824}
   firstLetter: {fileID: 992228457}
+  rewardingMessage: {fileID: 1149419052}
   textField: {fileID: 647711287}
   errorClip:
     Clip: {fileID: 0}
     Type: 0
-  rewardingMessage: {fileID: 1149419052}
-  findAllLetters: 0
-  active: 0
+  rewardingClip:
+    Clip: {fileID: 8300000, guid: 97055ab29df10d04caee8e8a85e718d0, type: 3}
+    Type: 2
 --- !u!4 &1973761737
 Transform:
   m_ObjectHideFlags: 0
@@ -12325,7 +12428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ingresa la palabra que descubriste:'
+  m_text: "Ingres\xE1 la palabra que descubriste:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 374c5155aa56de746802239fb2cfe9c3, type: 2}
   m_sharedMaterial: {fileID: 6875920600496710787, guid: 374c5155aa56de746802239fb2cfe9c3, type: 2}
@@ -12879,7 +12982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2030848834
 Transform:
   m_ObjectHideFlags: 0
@@ -12929,8 +13032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d02078df839a984286f41271d12b145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 0}
   interactSound:
-    Clip: {fileID: 8300000, guid: 89000b669f69c6648a404ac4df8255f4, type: 3}
+    Clip: {fileID: 8300000, guid: 2d7b01c1a6cc9be458544e9cf733ad8c, type: 3}
     Type: 1
   cantInteractSound:
     Clip: {fileID: 0}

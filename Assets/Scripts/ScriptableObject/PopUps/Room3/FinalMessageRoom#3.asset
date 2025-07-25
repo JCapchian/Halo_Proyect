@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72ec8376fce92146b3c8c3b998e6bd5, type: 3}
+  m_Name: FinalMessageRoom#3
+  m_EditorClassIdentifier: 
+  Title: 
+  Description: A veces, las respuestas no llegan con ruido, sino cuando uno se detiene
+    a escuchar
+  ButtonText: Continuar
+  ShowAudio:
+    Clip: {fileID: 8300000, guid: 1a95c2fb9f223644992472a64acb4a96, type: 3}
+    Type: 2
+  HideAudio:
+    Clip: {fileID: 0}
+    Type: 2
+  PopUpPrefab: {fileID: 7777066809775006294, guid: 15b336b0398173041ae78baaa26c4d82, type: 3}

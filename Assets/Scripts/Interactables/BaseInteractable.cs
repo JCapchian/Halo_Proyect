@@ -6,6 +6,7 @@ public abstract class BaseInteractable : MonoBehaviour
     protected AudioManager audioManager;
     protected PlayerController playerController;
 
+    [SerializeField] protected Collider c;
     protected bool blocked;
 
     [Header("Effects")]
@@ -34,5 +35,6 @@ public abstract class BaseInteractable : MonoBehaviour
     public virtual void DisableInteractable()
     {
         blocked = true;
+        c.enabled = false;
     }
 }

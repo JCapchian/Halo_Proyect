@@ -26,12 +26,18 @@ public class EffectManager : MonoBehaviour
     [Space(20f)]
     [Header("Color Adjustment")]
     ColorAdjustments colorAdj;
+    [Space(20f)]
+    [Header("Film Grain")]
+    FilmGrain filmGrain;
 
 
     [Space(20f)]
     [Header("Music")]
     [SerializeField] AudioStruc room1Music;
     [SerializeField] AudioStruc room2Music;
+    [SerializeField] AudioStruc room2Dialog;
+    [SerializeField] AudioStruc room3Music;
+    [SerializeField] AudioStruc room3Dialog;
 
     public void Initialize(GameController _gameController)
     {
@@ -78,7 +84,14 @@ public class EffectManager : MonoBehaviour
         #region Color Adjustment
         if (volume.profile.TryGet<ColorAdjustments>(out colorAdj))
         {
-            colorAdj.active = true;
+            colorAdj.active = false;
+        }
+        depthToken = cts.Token;
+        #endregion
+        #region Film Grain
+        if (volume.profile.TryGet<FilmGrain>(out filmGrain))
+        {
+            filmGrain.active = false;
         }
         depthToken = cts.Token;
         #endregion
@@ -120,6 +133,7 @@ public class EffectManager : MonoBehaviour
     }
     public async Task BlurDepth()
     {
+        Debug.Log("blur");
         var currentTime = 0f;
         while (currentTime < blurDuration)
         {
@@ -142,12 +156,26 @@ public class EffectManager : MonoBehaviour
 
     public void EnableColorAdjustment()
     {
-
+        colorAdj.active = true;
     }
 
     public void DisableColorAdjustment()
     {
+        colorAdj.active = false;
+    }
 
+    #endregion
+
+    #region Film Grain
+
+    public void EnableFilmGrain()
+    {
+        filmGrain.active = true;
+    }
+
+    public void DisableFilmGrain()
+    {
+        filmGrain.active = false;
     }
 
     #endregion
@@ -162,4 +190,18 @@ public class EffectManager : MonoBehaviour
         gameController.AudioManager.StopAudioClip(room2Music.Type);
         gameController.AudioManager.PlayMusic(room2Music);
     }
+    public void StartRoom2Dialog()
+    {
+        gameController.AudioManager.PlaySound(room2Dialog);
+    }
+    public void StartRoom3Music()
+    {
+        gameController.AudioManager.StopAudioClip(room3Music.Type);
+        gameController.AudioManager.PlayMusic(room3Music);
+    }
+    public void StartRoom3Dialog()
+    {
+        gameController.AudioManager.PlaySound(room3Dialog);
+    }
+
 }

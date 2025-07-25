@@ -7,4 +7,9 @@ public class Computer : BaseInteractable
         audioManager.PlayOneShot(interactSound);
         gameController.RoomManager.FindLetters.StartGame();
     }
+
+    public void DisableCollider()
+    {
+        c.enabled = false;
+    }
 }

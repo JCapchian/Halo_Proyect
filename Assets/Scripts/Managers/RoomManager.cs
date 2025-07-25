@@ -50,6 +50,8 @@ public class RoomManager : MonoBehaviour
         //gameController.EffectManager.CancelDepth();
         gameController.EffectManager.BlurDepth();
         gameController.PlayerController.InputManager.DisableControls();
-        gameController.MenuManager.ShowFinalMessage();
+        gameController.MenuManager.ShowPopUp(1);
+        gameController.MenuManager.scenePopUps[1].hideButton.onClick.AddListener(gameController.MenuManager.FinalButton);
+        gameController.MenuManager.scenePopUps[1].hideButton.onClick.AddListener(gameController.MenuManager.HideBackground);
     }
 }
