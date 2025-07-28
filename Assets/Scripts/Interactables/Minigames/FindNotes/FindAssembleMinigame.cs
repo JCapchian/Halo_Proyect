@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class FindAssembleMinigame : BaseMinigame
 {
     [Header("FindAssemble Minigame")]
+    [SerializeField] GameObject countObject;
+    [SerializeField] TMP_Text pagesCount;
+    int pagesAmount;
     [SerializeField] AudioStruc introDialog;
     [SerializeField] List<NotePickUp> notes;
     [SerializeField] GameObject assembleScreen;
@@ -28,8 +32,20 @@ public class FindAssembleMinigame : BaseMinigame
         StartGame();
     }
 
+    public void IncreaseCount()
+    {
+        pagesAmount++;
+        pagesCount.text = pagesAmount + " / 4";
+    }
+
+    public void ShowCount()
+    {
+        countObject.SetActive(true);
+    }
+
     void ShowAssembleScreen()
     {
+        countObject.SetActive(false);
         assembleScreen.SetActive(true);
         gameController.PlayerController.InputManager.DisableControls();
         gameController.EffectManager.BlurDepth();

@@ -10,6 +10,8 @@ public class NotePickUp : BaseInteractable
     {
         audioManager.PlayOneShot(interactSound);
         picked = true;
+        minigame.ShowCount();
+        minigame.IncreaseCount();
         minigame.CheckNotes();
 
         gameObject.SetActive(false);

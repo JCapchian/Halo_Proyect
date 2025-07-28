@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: Reconstruiste momentos, seguiste huellas. Ahora, algo nuevo se abre.
   ButtonText: Avanzar
   ShowAudio:
-    Clip: {fileID: 8300000, guid: c0d4c34d570e8e14792108a6c02d2d11, type: 3}
+    Clip: {fileID: 8300000, guid: 510900f34ed3912438e0a105170681d8, type: 3}
     Type: 2
   HideAudio:
     Clip: {fileID: 0}

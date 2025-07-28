@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class FindLettersMinigame : BaseMinigame
 {
@@ -18,6 +15,7 @@ public class FindLettersMinigame : BaseMinigame
     [Space(20f)]
     [Header("Screens")]
     [SerializeField] GameObject findLetterScreen;
+    [SerializeField] GameObject indicationScreen;
     [SerializeField] GameObject textScreen;
     [SerializeField] GameObject firstLetter;
     [SerializeField] GameObject rewardingMessage;
@@ -59,6 +57,7 @@ public class FindLettersMinigame : BaseMinigame
             wordIndex = 0;
             textField.characterLimit = 100;
 
+            indicationScreen.SetActive(false);
             findLetterScreen.SetActive(true);
             firstLetter.SetActive(true);
             ActiveLetters();
