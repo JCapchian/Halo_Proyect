@@ -3,4 +3,5 @@ public enum AudioType
 {
     Music,
     Sound,
+    Dialog
 }

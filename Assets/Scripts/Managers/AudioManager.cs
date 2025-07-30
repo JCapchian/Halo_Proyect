@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource soundSource;
+    [SerializeField] AudioSource dialogSource;
 
     public void Initialize(GameController _gameController)
     {
@@ -21,6 +22,27 @@ public class AudioManager : MonoBehaviour
                 break;
             case AudioType.Sound:
                 soundSource.PlayOneShot(audioStruc.Clip);
+                break;
+            case AudioType.Dialog:
+                dialogSource.PlayOneShot(audioStruc.Clip);
+                break;
+        }
+    }
+    public void PlaySound(AudioStruc audioStruc)
+    {
+        switch (audioStruc.Type)
+        {
+            case AudioType.Music:
+                musicSource.clip = audioStruc.Clip;
+                musicSource.Play();
+                break;
+            case AudioType.Sound:
+                soundSource.clip = audioStruc.Clip;
+                soundSource.Play();
+                break;
+            case AudioType.Dialog:
+                dialogSource.clip = audioStruc.Clip;
+                dialogSource.Play();
                 break;
         }
     }
@@ -52,6 +74,10 @@ public class AudioManager : MonoBehaviour
             case AudioType.Sound:
                 soundSource.clip = null;
                 soundSource.Stop();
+                break;
+            case AudioType.Dialog:
+                dialogSource.clip = null;
+                dialogSource.Stop();
                 break;
         }
 

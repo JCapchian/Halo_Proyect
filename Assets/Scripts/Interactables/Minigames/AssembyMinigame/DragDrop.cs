@@ -34,7 +34,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        GameController.Instance.AudioManager.PlayOneShot(pickAudio);
+        GameController.Instance.AudioManager.StopAudioClip(AudioType.Dialog);
+        GameController.Instance.AudioManager.StopAudioClip(pickAudio.Type);
+        GameController.Instance.AudioManager.PlaySound(pickAudio);
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
     }
